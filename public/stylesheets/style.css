@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #001e4d;
+}
+
+.app {
+    background: #fff;
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto 0;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 25px;
+    color: #001e4d;
+    font-weight: 600;
+    border-bottom: 1px solid #333;
+    padding-bottom: 20px;
+}
+
+.quiz h2 {
+    font-size: 18px;
+    color: #001e4d;
+    margin: 20px 0;
+}
+
+.btn {
+    background: #fff;
+    color: #222;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:hover:not([disabled]) {
+    background: #222;
+    color: #fff;
+}
+
+.btn:disabled {
+    cursor: no-drop;
+}
+
+#next-btn, #back-btn {
+    background: #001e4d;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    cursor: pointer;
+    display: block;
+    border-radius: 4px;
+}
+
+.correct {
+    background: #9aeabc;
+}
+
+.incorrect {
+    background: #ff9393;
+}
+
+.timer {
+    font-size: 16px;
+    color: red;
+    position: absolute;
+    top: 70px;
+    right: 50px; 
+    font-weight: bold;
+}
+
+.start-screen.box {
+    background: #fff;
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.start-screen label {
+    font-size: 16px;
+    color: #001e4d;
+    font-weight: 500;
+}
+
+#question-count {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.progress {
+    font-size: 16px;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #eee;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #4caf50;
+    width: 0%;
+    transition: width 0.4s ease;
+}
+
+.review-question {
+    margin: 20px 0;
+    text-align: left;
+}
+
+.review-question h3 {
+    font-size: 16px;
+    color: #001e4d;
+    margin-bottom: 8px;
+}
+
+.review-answer {
+    padding: 8px;
+    margin: 4px 0;
+    border-radius: 4px;
+}
+
+.correct-answer {
+    background-color: #c8f7c5;
+}
+
+.incorrect-answer {
+    background-color: #f7c5c5;
+}
+
+.user-answer {
+    font-weight: bold;
+}
+
+/* 🌙 Dark Mode Theme */
+body.dark {
+    background: #0b0bda;
+    color: #e0e0e0;
+}
+
+body.dark .app,
+body.dark .start-screen.box,
+body.dark .review-answer {
+    background: #1f1f1f;
+    color: #e0e0e0;
+    border-color: #444;
+}
+
+body.dark .btn {
+    background: #2c2c2c;
+    color: #e0e0e0;
+    border-color: #555;
+}
+
+body.dark .btn:hover:not([disabled]) {
+    background: #555;
+    color: #fff;
+}
+
+body.dark .correct {
+    background-color: #2e7d32;
+    color: white;
+}
+
+body.dark .incorrect {
+    background-color: #c62828;
+    color: white;
+}
+
+body.dark .progress-bar {
+    background-color: #2e2e2e;
+}
+
+body.dark .progress-fill {
+    background-color: #1db954;
+}
+
+/* #dark-mode-toggle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #001e4d;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    z-index: 1000;
+} */
+
+body.dark #dark-mode-toggle {
+    background: #333;
+    color: white;
+} 
+
+.profile-div{
+    padding: 2% 20%;
+    display:flex;
+    flex-direction: column;
+    position:center;
+    text-align:center;
+    color:white;
+}
+
+.games{
+    padding:10px;
+}
+
+.leaderboard-div{
+    text-align:center;
+    padding: 2% 20%;
+    display:flex;
+    flex-direction: column;
+    position:center;
+    color:white;
+}
+
+.ranked{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+

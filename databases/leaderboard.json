@@ -1,0 +1,64 @@
+{
+  "leaderboard": [
+    {
+      "id": "2",
+      "score": 70,
+      "TPQ": "1.67",
+      "gameID": 4
+    },
+    {
+      "id": "2",
+      "score": 60,
+      "TPQ": "1.69",
+      "gameID": 5
+    },
+    {
+      "id": "1",
+      "score": 50,
+      "TPQ": "4.13",
+      "gameID": 3
+    },
+    {
+      "id": "1",
+      "score": 50,
+      "TPQ": "3.21",
+      "gameID": 2
+    },
+    {
+      "id": "1",
+      "score": 50,
+      "TPQ": "1.36",
+      "gameID": 1
+    },
+    {
+      "id": 0,
+      "score": 0,
+      "TPQ": 0,
+      "gameID": 0
+    },
+    {
+      "id": 0,
+      "score": 0,
+      "TPQ": 0,
+      "gameID": 0
+    },
+    {
+      "id": 0,
+      "gameID": 0,
+      "score": 0,
+      "TPQ": 0
+    },
+    {
+      "id": 0,
+      "gameID": 0,
+      "score": 0,
+      "TPQ": 0
+    },
+    {
+      "id": 0,
+      "gameID": 0,
+      "score": 0,
+      "TPQ": 0
+    }
+  ]
+}

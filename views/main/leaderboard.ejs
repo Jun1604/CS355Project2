@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Quiz App</title>
+<link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+
+<body>
+    <%-include("./quizheader.ejs")%>
+    <div class="leaderboard-div">
+        <h1 style="color:white">Welcome to the Leaderboard <%=(users.find(user => user.id == userID)).userName %>!</h1>
+        <% for(let i = 0; i < rankings.length; i++) { %>
+            <% if(rankings[i].score != 0){%>
+            <div class="ranked">
+                <%let chosenGame = (games.find(game => game.gameID == rankings[i].gameID));%>
+                <h3>Rank: <span style="color:green"><%=i+1%> </span></h3>
+                <h5>Game Date: <span style="color:green"><%= chosenGame.date %></span></h5>
+                <h5>User Name: <span style="color:green"><%= (users.find(user => user.id == chosenGame.id)).userName %></span></h5>
+                <h5>Score: <span style="color:green"><%= rankings[i].score %></span></h5>
+                <h5>Time Per Question:<span style="color:green"> <%= rankings[i].TPQ %> </span>seconds</h5>
+            </div>
+            <%}%>
+        <%}%>
+    </div>
+
+</body>
+</html>

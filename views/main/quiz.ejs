@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+<body>
+  <%-include("./quizheader.ejs")%>
+
+<!-- Start Screen -->
+<div id="start-screen" class="start-screen box">
+  <h2>Welcome to the Quiz!</h2>
+  <label for="question-count">How many questions?</label>
+  <select id="question-count">
+    <option value="5">5</option>
+    <option value="10" selected>10</option>
+    <option value="15">15</option>
+    <option value="20">20</option>
+  </select>
+  <br><br>
+  <button id="start-btn">Start Quiz</button>
+</div>
+
+<!-- Quiz App -->
+<div class="app" style="display: none;">
+  <h1>Simple Quiz</h1>
+  <div id="progress" class="progress">Question 1 of 10</div>
+  <div class="progress-bar">
+    <div id="progress-fill" class="progress-fill"></div>
+  </div>
+  <div id="timer" class="timer">Time: 10s</div>
+  <div class="quiz">
+    <h2 id="question">Question goes here</h2>
+    <div id="answer-buttons"></div>
+    <button id="next-btn" style="display: none;">Next</button>
+  </div>
+</div>
+
+<!-- Review Screen -->
+<div id="review-screen" style="display: none;" class="app">
+  <h1>Review Answers</h1>
+  <div id="review-container"></div>
+  <button id="back-btn">Back to Start</button>
+</div>
+
+  <script src="./javascript/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+body.dark {
+    background: #0b0bda;
+    color: #e0e0e0;
+}
+
+body.dark .app,
+body.dark .start-screen.box,
+body.dark .review-answer {
+    background: #1f1f1f;
+    color: #e0e0e0;
+    border-color: #444;
+}
+
+body.dark .btn {
+    background: #2c2c2c;
+    color: #e0e0e0;
+    border-color: #555;
+}
+
+body.dark .btn:hover:not([disabled]) {
+    background: #555;
+    color: #fff;
+}
+
+body.dark .correct {
+    background-color: #2e7d32;
+    color: white;
+}
+
+body.dark .incorrect {
+    background-color: #c62828;
+    color: white;
+}
+
+body.dark .progress-bar {
+    background-color: #2e2e2e;
+}
+
+body.dark .progress-fill {
+    background-color: #1db954;
+}
+
+/* #dark-mode-toggle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 8px 12px;  
+
+    background: #001e4d;
+    color: white;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    z-index: 1000;
+}
+  */
+
+
+body.dark #dark-mode-toggle {
+    background: #333;
+    color: white;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:20px;
+}
+
+.but {
+    /* position: absolute;
+    top: 50px;
+    left: 30px; */
+    background: #001e4d;
+    color: white;
+    padding: 10px 10px; 
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    z-index: 1000;
+}
