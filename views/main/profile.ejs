@@ -7,7 +7,8 @@
 </head>
 
 <body>
-    <%-include("./quizheader.ejs")%>
+    <%- include('./quizheader.ejs', { path}) %> 
+
     <div class="profile-div">
         <h1 style="color:white">Welcome back <%=(users.find(user => user.id == userID)).userName %>!</h1>
         <h2 style="color:red">Your most recent games:</h2>
@@ -23,6 +24,5 @@
             <%}%>
         <%}%>
     </div>
-
 </body>
 </html>

@@ -5,6 +5,8 @@ var router = express.Router();
 const usersDBFileName = "./databases/users.json";
 const gameDBFileName = "./databases/games.json";
 const leaderboardFileName = "./databases/leaderboard.json";
+const avatarDBFileName = "./databases/avatar.json";
+const profilesDBFileName = "./databases/profile.json";
 
 
 router.get('/', function(req, res, next) {
@@ -16,7 +18,8 @@ router.get('/', function(req, res, next) {
         games: gameHistory,
         users: userDB,
         rankings: leaderboard,
-        userID
+        userID,
+        path: getPath(getPicID(req,res))
     });    
 });
 
@@ -32,5 +35,27 @@ function readLeaderboard() {
     let data = fs.readFileSync(leaderboardFileName, "utf-8");
     return JSON.parse(data);
 }
+
+function readAvatarDB() {
+    let data = fs.readFileSync(avatarDBFileName, "utf-8");
+    return JSON.parse(data);
+}
+
+function getPath(picID){
+    let avatarDB = readAvatarDB();
+    return ((avatarDB.find(avatar => avatar.picID == picID)).path);
+}
+
+function getPicID(req,res){
+  let users = readProfilesDB().profiles;
+  let picID = (users.find(user => user.id == req.cookies.userID)).imgID;
+  return picID;}
+
+function readProfilesDB() {
+    let data = fs.readFileSync(profilesDBFileName, "utf-8");
+    return JSON.parse(data);
+}
+
+
 
 module.exports = router;

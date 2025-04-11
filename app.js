@@ -10,6 +10,8 @@ var authRouter = require('./routes/auth');
 var profileRouter = require('./routes/profile');
 var quizRouter = require('./routes/quiz');
 var leaderboardRouter = require('./routes/leaderboard');
+var settingRouter = require('./routes/settings');
+
 
 var app = express();
 
@@ -29,6 +31,7 @@ app.use('/auth', authRouter);
 app.use('/leaderboard', leaderboardRouter);
 app.use('/profile', profileRouter);
 app.use('/quiz', quizRouter);
+app.use('/settings', settingRouter);
 
 
 // catch 404 and forward to error handler

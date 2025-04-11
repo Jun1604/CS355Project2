@@ -1,17 +1,23 @@
 {
-  "userCount": 2,
+  "userCount": 3,
   "users": [
     {
       "id": 1,
       "userName": "Admin",
       "email": "realEmail@gmail.com",
-      "password": "12345"
+      "password": "12345\r\n12345"
     },
     {
       "id": 2,
       "userName": "realDude",
       "email": "realEmail2@gmail.com",
       "password": "12345"
+    },
+    {
+      "id": 3,
+      "userName": "newPerson",
+      "email": "123@gmail.com",
+      "password": "12"
     }
   ]
 }

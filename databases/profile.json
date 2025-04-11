@@ -1,0 +1,14 @@
+{
+  "profiles": [
+    {
+      "id": "1",
+      "imgID": "1",
+      "bio": "I am that guy!!\r\n"
+    },
+    {
+      "id": 3,
+      "imgID": "1",
+      "bio": "Insert Bio"
+    }
+  ]
+}

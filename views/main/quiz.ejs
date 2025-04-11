@@ -4,9 +4,10 @@
   <meta charset="UTF-8" />
   <title>Quiz App</title>
   <link rel="stylesheet" href="/stylesheets/style.css" />
+
 </head>
 <body>
-  <%-include("./quizheader.ejs")%>
+  <%- include('./quizheader.ejs', { path}) %> 
 
 <!-- Start Screen -->
 <div id="start-screen" class="start-screen box">
@@ -23,7 +24,7 @@
 </div>
 
 <!-- Quiz App -->
-<div class="app" style="display: none;">
+<div class="app mainQuiz" style="display: none;">
   <h1>Simple Quiz</h1>
   <div id="progress" class="progress">Question 1 of 10</div>
   <div class="progress-bar">

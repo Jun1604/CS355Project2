@@ -20,42 +20,55 @@ router.get("/api/questions", (req, res) => {
 router.post("/submitQuiz", (req, res) => {
     const{gameScore, time} = req.body;
 
-    let leaderboard = readleaderboard();
+    let leaderboardDB = readleaderboard();
+    let leaderboard= leaderboardDB.leaderboard;
     let gamesDB = readGamesDB();
     let tpq= parseFloat((time/(questionCount*1000))).toFixed(2);
+    let trueScore = parseInt((gameScore/questionCount)*100);
 
     gamesDB.gameID++;
     const newGame={
         id: req.cookies.userID,
-        score: parseInt((gameScore/questionCount)*100),
+        score: trueScore,
         TPQ: tpq,
         date: new Date().toLocaleString(),
         gameID: gamesDB.gameID
     }
     
     let rank=-1;
-    for(let i=0; i<leaderboard.leaderboard.length; i++){
-        if(leaderboard.leaderboard[i].score<= gameScore){
-            if(leaderboard.leaderboard[i].TPQ>tpq){
-                rank=i;
-                break;
-            }
+
+
+    for(let i=0; i<leaderboard.length; i++){
+        if(leaderboard[i].score== trueScore && leaderboard[i].TPQ >= tpq){
+            rank=i
+            break;
         }
+        if(leaderboard[i].score< trueScore){
+            rank=i;
+            break;
+        }
+        
     }
+
+
     if(rank!=-1){
+        console.log("FOUND RANK");
         const newRank={
             id: req.cookies.userID,
-            score: gameScore,
+            score: trueScore,
             TPQ: tpq,
             gameID: gamesDB.gameID
         }
-        leaderboard.leaderboard.splice(rank,0,newRank);
-        leaderboard.leaderboard = leaderboard.leaderboard.slice(0,10);
+        leaderboard.splice(rank,0,newRank);
+        leaderboard = leaderboard.slice(0,10);;
     }
+
+    leaderboardDB.leaderboard = leaderboard;
 
     gamesDB.games.unshift(newGame);
     writeGamesDB(gamesDB);
-    writeleaderboard(leaderboard);
+    writeleaderboard(leaderboardDB);
+    // res.json({ success: true, message: "Score submitted successfully." });
 });
 
 

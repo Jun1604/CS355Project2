@@ -1,15 +1,68 @@
-<body>
-    <link rel="stylesheet" href="/stylesheets/darkmode.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/stylesheets/darkmode.css">
+  <link rel="stylesheet" href="/stylesheets/header.css">
+
+</head>
+
+<body >
     <div class="navbar">
         <div>
             <button class="but" id="dark-mode-toggle">🌙 Dark Mode</button>
         </div>
-        <div>
-            <a href="/quiz"><button class="but" id="quiz"><h2>Quiz</h2></button></a>
-            <a href="/profile"><button class="but" id="profile"><h2>Profile</h2></button></a>
-            <a href="/leaderboard"><button class="but" id="leaderboard"><h2>Leaderboard</h2></button></a>
-            <a href="/auth/logout"><button class="but" id="logout"><h2>Logout</h2></button></a>
+
+
+        <div class="navbarP2">
+          
+          <a href="/quiz"><button class="but" id="quiz"><h2>Quiz</h2></button></a>
+
+          <div class="dropdown-Container">
+            <div class="profile-button"><span><img id="headerPic" class="profilePic" src ="<%= path %>"></span></div>
+
+            <div class="dropdownMenu">
+              <div class="dropdownMenuContainer">
+                  <div class="settings">
+                    <a href="/settings" style="border-radius: 50%">
+                      <span>
+                        <img class="pPic" src ="<%= path %>">
+                        <h2 id="greet">Hello!</h2>
+                    </a>
+                  </div>
+                
+                  <div class="options">
+                    <div class="dropdown-item">
+                      <a href="/profile">
+                        <h4>Recent Games</h4>
+                      </a>
+                    </div>
+
+                    <div class="dropdown-item">
+                      <a href="/leaderboard">
+                        <h4>Leaderboard</h4>
+                      </a>
+                    </div>
+
+                    <div class="dropdown-item">
+                      <a href="/auth/logout">
+                        <h4>Logout</h4>
+                      </a>
+                    </div>
+                  </div>
+
+              </div>
+
+          </div>
+        </div>
+          
+            
         </div>
     </div>
+
+
+
     <script src="/javascript/darkmode.js"></script>
+    <script src="/javascript/navbar.js"></script>
 </body>

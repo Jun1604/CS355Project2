@@ -7,7 +7,6 @@ if (localStorage.getItem("mode") === "dark") {
 }
 
 darkToggle.addEventListener("click", () => {
-    console.log("hi");
     document.body.classList.toggle("dark");
     if (document.body.classList.contains("dark")) {
         darkToggle.textContent = "☀️ Light Mode";

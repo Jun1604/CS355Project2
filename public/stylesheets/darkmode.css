@@ -62,13 +62,6 @@ body.dark #dark-mode-toggle {
     color: white;
 }
 
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding:20px;
-}
-
 .but {
     /* position: absolute;
     top: 50px;
@@ -82,3 +75,4 @@ body.dark #dark-mode-toggle {
     border: none;
     z-index: 1000;
 }
+

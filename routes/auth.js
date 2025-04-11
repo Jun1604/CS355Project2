@@ -3,6 +3,8 @@ const fs = require("fs");
 const path = require("path");
 var router = express.Router();
 const userDBFileName = "./databases/users.json";
+const profileDBFileName = "./databases/profile.json";
+
 
 router.get('/signin', function(req, res, next) {
     renderSignin(req,res);
@@ -34,6 +36,7 @@ router.post("/signup/submit", (req, res) => {
     }
 
     let userDB = readUserDB();
+    let profileDB = readProfileDB();
     for(let user of userDB.users){
         if(user.email == req.body.email){
             return renderSignup(req, res, "Email is already used. Try again");
@@ -50,9 +53,17 @@ router.post("/signup/submit", (req, res) => {
         "email": req.body.email,
         "password": req.body.password
     }
+
+    const newProfile={
+        "id": userDB.userCount,
+        "imgID":"0",
+        "bio":""
+    }
     res.cookie("userID", userDB.userCount );
     userDB.users.push(newUser);
-    writeUserDB(userDB);    
+    profileDB.profiles.push(newProfile);
+    writeUserDB(userDB); 
+    writeProfileDB(profileDB);    
     renderHome(req, res);
 });
 
@@ -86,5 +97,15 @@ function writeUserDB(users){
     fs.writeFileSync(userDBFileName, data, "utf-8");
 }
 
+function readProfileDB() {
+    let data = fs.readFileSync(profileDBFileName, "utf-8");
+    console.log(data);
+    return JSON.parse(data);
+}
+
+function writeProfileDB(users){
+    let data = JSON.stringify(users, null, 2);
+    fs.writeFileSync(profileDBFileName, data, "utf-8");
+}
 
 module.exports = router;
