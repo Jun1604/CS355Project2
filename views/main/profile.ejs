@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Quiz App</title>
+<link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+
+<body>
+    <%- include('./quizheader.ejs', { path}) %> 
+
+    <div class="profile-div">
+        <h1 style="color:white">Welcome back <%=(users.find(user => user.id == userID)).userName %>!</h1>
+        <h2 style="color:red">Your most recent games:</h2>
+        <% for(let i = 0; i < games.length; i++) { %>
+            <% if(games[i].id == userID){%>
+            <div class="games">
+                <h2>Game Date:<span style="color:green"> <%= games[i].date %></span></h2>
+                <div class="info">
+                    <h3>Score:<span style="color:green"> <%= games[i].score %></span></h3>
+                    <h3>Time Per Question: <span style="color:green"> <%= games[i].TPQ %> </span> seconds</h3>
+                </div>
+            </div>
+            <%}%>
+        <%}%>
+    </div>
+</body>
+</html>

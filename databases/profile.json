@@ -1,0 +1,24 @@
+{
+  "profiles": [
+    {
+      "id": "1",
+      "imgID": "3",
+      "bio": "U can edit things and it saves. Click the profile"
+    },
+    {
+      "id": 3,
+      "imgID": "1",
+      "bio": "Insert Bio"
+    },
+    {
+      "id": 4,
+      "imgID": "0",
+      "bio": ""
+    },
+    {
+      "id": 5,
+      "imgID": "0",
+      "bio": ""
+    }
+  ]
+}

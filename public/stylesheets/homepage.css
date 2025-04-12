@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #8299ED;
+    color: #222;
+}
+
+.homepage{
+    padding:20%;
+    position:center;
+}
+
+.homeContainer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title h1{
+    border-bottom: none;
+    color: #222;
+}
+
+.parent-container{
+    padding:20%;
+    position:center;
+    text-align:center;
+}
+
+.container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+

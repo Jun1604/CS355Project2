@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" /> 
+    <link rel="stylesheet" href="/stylesheets/settings.css" /> 
+</head>
+
+<body>
+    <%- include('./quizheader.ejs', {path}) %> 
+    <div class="title">
+        <h1>Settings</h1>
+    </div>
+    <div class="settingContainer">
+        <div class="customized">
+            <div class="profilePictures">
+                <div class="profileChange"><span><img id="picture" class="profilePic" src ="<%=path%>"></span></div>
+                
+                <div class="picturesDropDown">
+                    <form action="/settings/update-pPic" method="POST" class="_form">
+                        <div class="picturesContainer">
+                            
+                                <input type="radio" id="0" name="picRadio" value="0">
+                                <label for="0"><img id="0" class="choice" src="/images/blankProfile.jpeg" >
+                            </label>
+                            
+                                <input type="radio" id="1" name="picRadio" value="1">
+                                <label for="1"><img id="1" class="choice" src="/images/Mr._Fresh.jpeg"  >
+                            </label>
+                            
+                                <input type="radio" id="2" name="picRadio" value="2">
+                                <label for="2"><img id="2" class="choice" src="/images/pic2.jpg" >
+                            </label>
+                           
+                                <input type="radio" id="3" name="picRadio" value="3">
+                                <label for="3"><img id="3"class="choice" src="/images/suitCat.jpg" >
+                                </label>
+                            <input type="submit" value="post" style="display: none;" >
+                    </div>
+                </form>
+
+                </div>
+
+
+            </div>
+            <div id="bio">
+                <form action="/settings/changeBio" method="POST" id="change_bio">
+                    <label for="bio"><h2 style="color:white; text-align: center;">Bio:</h2></label>
+                    <textarea id="bio" name="bio" cols="30" rows="2" wrap="hard" maxlength="50" onchange="submitBio()"><%= bio %></textarea>
+                </form>
+            </div>
+        </div>
+        <div class="information">
+            <span style="color:red; font-weight: bolder; font-size:larger;"><%=msg%></span>
+            <div id="Username" class="infoPiece">
+                <form action="/settings/changeUser" method="POST" id="change_user">
+                    <label for="userName"><h2>Username:</h2></label>
+                    <textarea id="userName" name="userName" cols="25" rows="1" wrap="hard" maxlength="20" onchange="submitUser()"><%=userName%></textarea>
+                </form>                
+            </div>
+
+            <div id="Email" class="infoPiece">
+                <form action="/settings/changeEmail" method="POST" id="change_email">
+                    <label for="email"><h2>Email:</h2></label>
+                    <textarea id="email" name="email" cols="25" rows="1" wrap="hard" maxlength="30" onchange="submitEmail()"><%=email%></textarea>
+                </form>
+            </div>
+
+            <div id="Password" class="infoPiece">
+                <form action="/settings/changePassword" method="POST" id="change_password">
+                    <label for="password"><h2>Password:</h2></label>
+                    <textarea id="password" name="password" cols="25" rows="1" wrap="hard" maxlength="30" onchange="submitPassword()"><%=password%></textarea>
+                </form>                
+            </div>
+        </div>
+    </div>
+    <script src="/javascript/profileSettings.js"></script>
+
+
+</body>
+</html>

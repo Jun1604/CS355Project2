@@ -1,0 +1,35 @@
+{
+  "userCount": 5,
+  "users": [
+    {
+      "id": 1,
+      "userName": "Admin",
+      "email": "realEmail@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": 2,
+      "userName": "realDude",
+      "email": "realEmail2@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": 3,
+      "userName": "newPerson",
+      "email": "123@gmail.com",
+      "password": "12"
+    },
+    {
+      "id": 4,
+      "userName": "a",
+      "email": "asas@tom.com",
+      "password": "123456"
+    },
+    {
+      "id": 5,
+      "userName": "real",
+      "email": "fake@gmail.com",
+      "password": "12345"
+    }
+  ]
+}
