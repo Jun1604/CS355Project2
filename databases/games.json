@@ -1,6 +1,13 @@
 {
-  "gameID": 30,
+  "gameID": 31,
   "games": [
+    {
+      "id": "1",
+      "score": 80,
+      "TPQ": "1.91",
+      "date": "4/12/2025, 10:54:27 AM",
+      "gameID": 31
+    },
     {
       "id": "1",
       "score": null,

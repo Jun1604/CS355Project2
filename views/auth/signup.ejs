@@ -7,31 +7,27 @@
     </head>
     <body>
         <%-include("./header.ejs")%>
-        <div class="parent-container">
-            <div class="container">
-                <form method="POST" action="/auth/signup/submit" class="signup_form">
-                    <div class="form_header">
-                        <h1>Sign up</h1>
-                        <p>Already have an account? <a href="/auth/signin">Sign in</a></p>
-                    </div>
-                    <span style="color: red;"><%= msg %></span>
-                    <label for="userName">Username</label>
-                    <input id="userName" type="text" name="userName">
-                    <label for="email">Email</label>
-                    <input id="email" type="email" name="email">
-                    <label for="password">Password</label>
-                    <input id="password" type="password" name="password">
-                    <div class="checkbox">
-                        <input type="checkbox" >
-                        <p>I do not want to receive emails with advertising, news, suggestions or marketing promotions</p>
-                    </div>
-                    <input type="submit" value="Sign up">
-                    <p class="footnote">
-                        By signing up to create an account, 
-                        you are accepting out terms of services and privacy policy
-                    </p>
-                </form>         
+        <body>
+            <div class="auth-wrapper">
+              <div class="glass-form">
+                <h2>Create Account</h2>
+                <p id="error-msg" style="color: red; font-weight: bold; text-align: center; margin-bottom: 10px;">
+                    <%=msg%>
+                  </p>
+                <form action="/auth/signup/submit" method="POST">
+                  <label>Userame</label>
+                  <input type="text" id="userName" name="userName" required />
+          
+                  <label>Email</label>
+                  <input type="email" id="email" name="email" required />
+          
+                  <label>Password</label>
+                  <input type="password" id="password" name="password" required />
+          
+                  <button type="submit">✨ Sign Up</button>
+                </form>
+                <p class="subtext">Already have an account? <a href="/auth/signin">Sign In</a></p>
+              </div>
             </div>
-        </div>
     </body>
 </html>

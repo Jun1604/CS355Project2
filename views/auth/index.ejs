@@ -9,21 +9,15 @@
 
 <body>
   <%-include("./header.ejs")%>
-  <section>
-    <div class="homepage">
-      <div class="homeContainer">
-        <div class="title">
-          <h1>Welcome to the Quiz!</h1>
-        </div>
-        <div class="buttons">
-          <h2>
-          <a href="/auth/signin">Sign In</a> or 
-          <a href="/auth/signup">Sign Up</a> to take the quiz
-          </h2>
-        </div>
-      </div>
-    </div>
-  </section>
+  <div class="welcome-wrapper">
+    <h1>Welcome to the <br><span>Quiz App</span></h1>
+    <p class="tagline">Let’s get you started!</p>
 
+    <a href="/auth/signup" class="btn big">Sign Up</a>
+    <p class="caption">Don’t have an account? Create one. →</p>
+
+    <a href="/auth/signin" class="btn big">Sign In</a>
+    <p class="caption">Already a member? Log in here. →</p>
+  </div>
 </body>
 </html>

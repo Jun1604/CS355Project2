@@ -1,5 +1,5 @@
 {
-  "userCount": 5,
+  "userCount": 6,
   "users": [
     {
       "id": 1,
@@ -29,6 +29,12 @@
       "id": 5,
       "userName": "real",
       "email": "fake@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": 6,
+      "userName": "new",
+      "email": "works@gmail.com",
       "password": "12345"
     }
   ]

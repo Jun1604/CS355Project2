@@ -9,21 +9,28 @@
     </head>
     <body>
         <%-include("./header.ejs")%>
-        <div class="parent-container">
-            <div class="container">
-                <form method="POST" action="/auth/signin/submit" class="signup_form">
-                    <div class="form_header">
-                        <h1>Sign in</h1>
-                        <p>Need to register? <a href="/auth/signup">Sign up</a></p>
-                    </div>
-                    <span style="color: red;"><%= msg %></span>
-                    <label for="email">Email</label>
-                    <input id="email" type="email" name="email">
-                    <label for="password">Password</label>
-                    <input id="password" type="password" name="password">
-                    <input type="submit" value="Sign in">
-                </form>         
-            </div>
+        <div class="auth-wrapper">
+          <div class="glass-form">
+            <h2>Sign In</h2>
+      
+            <!--  Error Message goes here -->
+            <p id="error-msg" style="color: red; font-weight: bold; text-align: center; margin-bottom: 10px;">
+              <%=msg%>
+            </p>
+      
+            <form action="/auth/signin/submit" method="POST">
+              <label>Email</label>
+              <input id="email" type="email" name="email" required />
+      
+              <label>Password</label>
+              <input id="password" type="password" name="password" required />
+              <button type="submit">🔐 Sign In</button>
+
+            </form>
+            
+            <p class="subtext">Don't have an account? <a href="/auth/signup">Sign Up</a></p>
+          </div>
+        </div>
         </div>
     </body>
 </html>

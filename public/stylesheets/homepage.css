@@ -39,6 +39,134 @@ body {
     align-items: center;
     flex-direction: column;
 }
+.welcome-wrapper {
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+  }
+  
+  .welcome-wrapper h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .welcome-wrapper span {
+    color: #00d4ff;
+  }
+  
+  
 
+  .welcome-wrapper .tagline {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+  
+
+
+  .btn.big {
+    background-color: #00c2cb;
+    padding: 14px 30px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    text-decoration: none;
+    margin: 10px auto;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    display: inline-block;
+    width: 220px;
+    text-align: center;
+  }
+  
+
+
+
+
+  .btn.big:hover {
+    background-color: #01a6b0;
+  }
+  
+
+  .caption {
+    font-size: 14px;
+    color: #ccc;
+    margin: 5px 0 20px;
+  }
+
+.auth-wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .glass-form {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    background-color: #6a9cf3;
+  }
+  
+  .glass-form h2 {
+    margin-bottom: 20px;
+    color: #001e4d;
+  }
+  
+  .glass-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+  }
+  
+  .glass-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #00c2cb;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+  }
+
+  .glass-form .inputSubmit{ 
+    width: 100%;
+    padding: 12px;
+    background-color: #00c2cb;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+  
+  .glass-form button:hover {
+    background-color: #008b93;
+  }
+  
+  .subtext {
+    font-size: 14px;
+    margin-top: 15px;
+    color: #001e4d;
+  }
+  
 
 
